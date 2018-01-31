@@ -1,0 +1,11 @@
+<archetype>
+  <id>dWb_custom_modules_archetype</id>
+  <sources>
+    <source>src/main/java/de/dwb/example/Adder.java</source>
+    <source>src/main/java/de/dwb/example/ActionsCharacterCounter.java</source>
+    <source>src/main/java/de/dwb/example/ThreadingCharacterCounter.java</source>
+  </sources>
+  <testSources>
+    <!--source>src/test/java/AppTest.java</source-->
+  </testSources>
+</archetype>
