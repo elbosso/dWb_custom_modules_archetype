@@ -1,4 +1,4 @@
-<!--
+/*
 Copyright (c) 2012-2018.
 
 Juergen Key. Alle Rechte vorbehalten.
@@ -31,13 +31,82 @@ VERPFLICHTUNG AUCH IMMER, OB IN VERTRAG, STRIKTER VERPFLICHTUNG ODER
 UNERLAUBTE HANDLUNG (INKLUSIVE FAHRLAESSIGKEIT) VERANTWORTLICH, AUF WELCHEM
 WEG SIE AUCH IMMER DURCH DIE BENUTZUNG DIESER SOFTWARE ENTSTANDEN SIND, SOGAR,
 WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>de.elbosso</groupId>
-  <artifactId>dWb_custom_modules_archetype</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <name>Archetype - dWb_custom_modules_archetype</name>
-  <url>http://maven.apache.org</url>
-</project>
+ */
+
+package ${package};
+
+import de.netsysit.dataflowframework.modules.ModuleBase;
+
+@de.elbosso.util.lang.annotations.BeanInfo
+public class Adder extends ModuleBase
+{
+	Number[] numbers;
+
+	public Adder()
+	{
+		super();
+		numbers = new Number[0];
+	}
+
+	@de.elbosso.util.lang.annotations.Method(
+			keyValueStore = {
+					//@de.elbosso.util.lang.annotations.KeyValueStore(key="de.netsysit.dataflowframework.ui.Slot.AUTOCONNECTALLOWEDATTRIBUTE",value="java.lang.Boolean.TRUE"),
+					@de.elbosso.util.lang.annotations.KeyValueStore(key="\"VariablePortCount\"", value="Boolean.TRUE")
+		}
+	)
+	public void input(Number in, String spec)
+	{
+		java.lang.String remainder = spec.substring("input".length());
+		int i = remainder.length();
+		if (i > 0)
+			i = java.lang.Integer.parseInt(remainder);
+		while (i >= numbers.length)
+		{
+			Number[] nt = new Number[i + 1];
+			System.arraycopy(numbers, 0, nt, 0, numbers.length);
+			numbers = nt;
+		}
+		numbers[i] = in;
+		process();
+	}
+
+	private double processed;
+
+	@de.elbosso.util.lang.annotations.Property
+	public double getProcessed()
+	{
+		return processed;
+	}
+
+	private void process()
+	{
+		double old = getProcessed();
+		double t = 0.0;
+		for (Number number : numbers)
+		{
+			if (number != null)
+			{
+				t += number.doubleValue();
+			}
+		}
+		processed = t;
+		send("processed", old, getProcessed());
+	}
+	@de.elbosso.util.lang.annotations.Event(
+			unicast = true
+	)
+	@Override
+	public void addPropertyChangeListener(java.beans.PropertyChangeListener l)
+	{
+		super.addPropertyChangeListener(l);
+	}
+
+	@de.elbosso.util.lang.annotations.Event(
+			inDefaultEventSet = true
+	)
+	@Override
+	public void removePropertyChangeListener(java.beans.PropertyChangeListener l)
+	{
+		super.removePropertyChangeListener(l);
+	}
+}	
