@@ -11,6 +11,7 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/elbosso/dWb_custom_modules_archetype/issues)
 [![GitHub contributors](https://img.shields.io/github/contributors/elbosso/dWb_custom_modules_archetype.svg)](https://GitHub.com/elbosso/dWb_custom_modules_archetype/graphs/contributors/)
 [![Github All Releases](https://img.shields.io/github/downloads/elbosso/dWb_custom_modules_archetype/total.svg)](https://github.com/elbosso/dWb_custom_modules_archetype)
+[![Website elbosso.github.io](https://img.shields.io/website-up-down-green-red/https/elbosso.github.io.svg)](https://elbosso.github.io/)
 
 This repository holds an archetype for developing
 modules for dWb+. You can find information about dWb+ 
