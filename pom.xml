@@ -40,4 +40,29 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
   <version>1.0-SNAPSHOT</version>
   <name>Archetype - dWb_custom_modules_archetype</name>
   <url>http://maven.apache.org</url>
+
+  <build>
+    <plugins>
+      <!-- https://github.com/tomasbjerre/git-changelog-maven-plugin/blob/master/git-changelog-maven-plugin-example/pom.xml -->
+      <plugin>
+        <groupId>se.bjurr.gitchangelog</groupId>
+        <artifactId>git-changelog-maven-plugin</artifactId>
+        <version>1.60</version>
+        <executions>
+          <execution>
+            <id>GenerateGitChangelogTemplateFromFileAndToken</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>git-changelog</goal>
+            </goals>
+            <configuration>
+              <templateFile>changelog.mustache</templateFile>
+              <readableTagName>-([^-]+?)$</readableTagName>
+              <file>CHANGELOG.md</file>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
