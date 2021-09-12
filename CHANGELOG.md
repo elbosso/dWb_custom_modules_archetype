@@ -5,6 +5,15 @@ Changelog of Git Changelog Maven plugin.
 ## Unreleased
 ### No issue
 
+**release 1.1.0**
+
+
+[e00c7f25dc9d2b1](https://github.com/elbosso/dWb_custom_modules_archetype/commit/e00c7f25dc9d2b1) Jürgen Key *2021-03-07 07:24:28*
+
+
+## 1.1.0
+### No issue
+
 **dependency management**
 
 
