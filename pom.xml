@@ -36,12 +36,12 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.elbosso</groupId>
   <artifactId>dWb_custom_modules_archetype</artifactId>
-  <version>1.2.0-SNAPSHOT</version>
+  <version>1.2.0</version>
   <name>Archetype - dWb_custom_modules_archetype</name>
   <url>http://maven.apache.org</url>
     <scm>
         <developerConnection>scm:git:https://github.com/elbosso/dWb_custom_modules_archetype.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>dWb_custom_modules_archetype-1.2.0</tag>
   </scm>
 
     <properties>
