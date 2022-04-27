@@ -3,7 +3,43 @@
 Changelog of Git Changelog Maven plugin.
 
 ## Unreleased
+### GitHub [#2](https://github.com/elbosso/dWb_custom_modules_archetype/issues/2) get rid of log4j and use the new bom dependency
+
+**re #2**
+
+
+[51bd233bce00eee](https://github.com/elbosso/dWb_custom_modules_archetype/commit/51bd233bce00eee) Jürgen Key *2022-04-27 15:52:34*
+
+**re #2**
+
+
+[b8a2d3b6f2c9ece](https://github.com/elbosso/dWb_custom_modules_archetype/commit/b8a2d3b6f2c9ece) Jürgen Key *2022-04-27 15:52:02*
+
+
+### Jira beta-1 
+
+**Bump protobuf-java in /src/main/resources/archetype-resources**
+
+ * Bumps [protobuf-java](https://github.com/protocolbuffers/protobuf) from 3.0.0-beta-1 to 3.16.1.
+ * - [Release notes](https://github.com/protocolbuffers/protobuf/releases)
+ * - [Changelog](https://github.com/protocolbuffers/protobuf/blob/master/generate_changelog.py)
+ * - [Commits](https://github.com/protocolbuffers/protobuf/compare/v3.0.0-beta-1...v3.16.1)
+ * ---
+ * updated-dependencies:
+ * - dependency-name: com.google.protobuf:protobuf-java
+ * dependency-type: direct:production
+ * ...
+ * Signed-off-by: dependabot[bot] &lt;support@github.com&gt;
+
+[254d96c052889b5](https://github.com/elbosso/dWb_custom_modules_archetype/commit/254d96c052889b5) dependabot[bot] *2022-01-07 22:37:31*
+
+
 ### No issue
+
+**change of repository location for de.elbosso artifacts**
+
+
+[771f0f928db7816](https://github.com/elbosso/dWb_custom_modules_archetype/commit/771f0f928db7816) Jürgen Key *2021-09-12 09:00:22*
 
 **release 1.1.0**
 
