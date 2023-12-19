@@ -5,6 +5,15 @@ Changelog of Git Changelog Maven plugin.
 ## Unreleased
 ### GitHub [#2](https://github.com/elbosso/dWb_custom_modules_archetype/issues/2) get rid of log4j and use the new bom dependency
 
+**fixes #2**
+
+
+[174d01f75dcc3ae](https://github.com/elbosso/dWb_custom_modules_archetype/commit/174d01f75dcc3ae) Jürgen Key *2022-04-27 15:53:06*
+
+
+## 1.2.0
+### GitHub [#2](https://github.com/elbosso/dWb_custom_modules_archetype/issues/2) get rid of log4j and use the new bom dependency
+
 **re #2**
 
 
